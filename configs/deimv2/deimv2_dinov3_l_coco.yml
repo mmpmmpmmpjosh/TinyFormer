@@ -1,0 +1,104 @@
+__include__: [
+  '../dataset/coco_detection.yml',
+  '../runtime.yml',
+  '../base/dataloader.yml',
+  '../base/optimizer.yml',
+  '../base/deimv2.yml',
+]
+
+
+output_dir: ./outputs/deimv2_dinov3_l_coco
+
+DEIM:
+  backbone: DINOv3STAs
+
+DINOv3STAs:
+  name: dinov3_vits16
+  weights_path: ./ckpts/dinov3_vits16_pretrain_lvd1689m-08c60483.pth
+  interaction_indexes: [5,8,11]   # only need the [1/8, 1/16, 1/32]
+  finetune: True
+  conv_inplane: 32
+  hidden_dim: 224
+
+HybridEncoder:
+  in_channels: [224, 224, 224]
+  hidden_dim: 224
+  dim_feedforward: 896
+
+DEIMTransformer:
+  feat_channels: [224, 224, 224]
+  hidden_dim: 224
+  num_layers: 4
+  eval_idx: -1
+  dim_feedforward: 1792
+
+## DEIM LR-Scheduler
+epoches: 68 # 72 + 2n  # Increase to search for the optimal ema
+
+lrsheduler: flatcosine
+lr_gamma: 0.5
+warmup_iter: 2000
+flat_epoch: 34    # 4 + epoch // 2, e.g., 40 = 4 + 72 / 2
+no_aug_epoch: 8
+
+## Optimizer
+optimizer:
+  type: AdamW
+  params: 
+    -
+      # except norm/bn/bias in self.dinov3
+      params: '^(?=.*.dinov3)(?!.*(?:norm|bn|bias)).*$'  
+      lr: 0.0000125
+    -
+      # including norm/bn/bias in self.dinov3
+      params: '^(?=.*.dinov3)(?=.*(?:norm|bn|bias)).*$'    
+      lr: 0.0000125
+      weight_decay: 0.
+    - 
+      # including norm/bn/bias except for the self.dinov3
+      params: '^(?=.*(?:sta|encoder|decoder))(?=.*(?:norm|bn|bias)).*$'
+      weight_decay: 0.
+
+  lr: 0.0005
+  betas: [0.9, 0.999]
+  weight_decay: 0.000125
+
+
+## Dense O2O: Mosaic + Mixup + CopyBlend
+train_dataloader: 
+  dataset: 
+    transforms:
+      ops:
+        - {type: Mosaic, output_size: 320, rotation_range: 10, translation_range: [0.1, 0.1], scaling_range: [0.5, 1.5],
+           probability: 1.0, fill_value: 0, use_cache: True, max_cached_images: 50, random_pop: True}
+        - {type: RandomPhotometricDistort, p: 0.5}
+        - {type: RandomZoomOut, fill: 0}
+        - {type: RandomIoUCrop, p: 0.8}
+        - {type: SanitizeBoundingBoxes, min_size: 1}
+        - {type: RandomHorizontalFlip}
+        - {type: Resize, size: [640, 640], }
+        - {type: SanitizeBoundingBoxes, min_size: 1}
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}
+        - {type: Normalize, mean: [0.485, 0.456, 0.406], std: [0.229, 0.224, 0.225]}
+        - {type: ConvertBoxes, fmt: 'cxcywh', normalize: True}
+      policy:
+        epoch: [4, 34, 60]   # list 
+
+  collate_fn:
+    mixup_epochs: [4, 34]
+    stop_epoch: 60
+    copyblend_epochs: [4, 60]
+    base_size_repeat: 3
+
+val_dataloader:
+  dataset:
+    transforms:
+      ops:
+        - {type: Resize, size: [640, 640], }
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}
+        - {type: Normalize, mean: [0.485, 0.456, 0.406], std: [0.229, 0.224, 0.225]}
+
+## DEIM Loss
+DEIMCriterion:
+  matcher:
+    matcher_change_epoch: 50
