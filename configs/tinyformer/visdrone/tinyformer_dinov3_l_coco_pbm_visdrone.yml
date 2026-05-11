@@ -7,7 +7,7 @@ __include__: [
 ]
 
 #{'Model FLOPs:105.678 GFLOPS   MACs:52.7391 GMACs   Params:33572015'}
-output_dir: ./outputs/tinyformer_dinov3_l_coco_pbm_d2_visdrone
+output_dir: ./outputs/tinyformer_dinov3_l_coco_pbm_visdrone
 
 DEIM:
   backbone: DINOv3SSAs_4Scale
