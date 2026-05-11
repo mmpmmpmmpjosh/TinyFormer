@@ -68,12 +68,7 @@ institution
   
 ## 1. Model Zoo
 ### COCO
-| Model | Dataset | AP | #Params | GFLOPs | Latency(ms) | config | checkpoint |
-| :---: | :---: | :---: | :---: | :---: |:------------:| :---: | :---: | 
-| **TinyFomer-S** | COCO | **51.3** | 9.8M |  25.1 | 2.33  | [yml](./configs/tinyformer/tinyformer_dinov3_s_coco.yml) | [Google](https://drive.google.com/file/d/198-pduC0C0Xvk8hDjFw1TFO96Lk93qG8/view?usp=drive_link) |
-| **TinyFomer-M** | COCO | **53.5** | 18.2M | 51.2 | 3.05 | [yml](./configs/tinyformer/tinyformer_dinov3_m_coco.yml) | [Google](https://drive.google.com/file/d/1_1ugu55IpLYLGvjm1bJUIq7VlJkAIjNC/view?usp=drive_link) |
-| **TinyFomer-L** | COCO | **56.5** | 32.3M | 96.3  |  3.54 | [yml](./configs/tinyformer/tinyformer_dinov3_l_coco.yml) | [Google](https://drive.google.com/file/d/1W98zx7PgYp01Al20jzwAah0ZaCKayJ3l/view?usp=drive_link) |
-| **TinyFomer-X** | COCO | **58.4** | 49.8M | 151.1 |  4.63  | [yml](./configs/tinyformer/tinyformer_dinov3_x_coco.yml) | [Google](https://drive.google.com/file/d/1_4FmTYCstRH2xiscRlFycv-fw5S6wtmt/view?usp=drive_link) |
+
 
 | Model | Dataset | AP | #Params | GFLOPs | Latency(ms) | config | checkpoint |
 | :---: | :---: | :---: | :---: | :---: |:------------:| :---: | :---: | 
@@ -82,6 +77,33 @@ institution
 | **TinyFomer-L-PBM** | COCO | **56.8** | 33.6M | 105.9  | 3.72 | [yml](./configs/tinyformer/tinyformer_dinov3_l_coco_pbm.yml) | [Google](https://drive.google.com/file/d/1cR0Q9k1p1UTxUlwfH-uSnNU_J5rwuQCk/view?usp=drive_link) |
 | **TinyFomer-X-PBM** | COCO | **58.5** | 51.5M | 164.2  | 4.81 | [yml](./configs/tinyformer/tinyformer_dinov3_x_coco_pbm.yml) | [Google](https://drive.google.com/file/d/1k-Fm8ZrfRqPkRV2OBV_ygIe-7I9WKAye/view?usp=drive_link) |
 | **TinyFomer-XL-PBM** | COCO | **60.6** | 125.5M | 437.9 |  7.91   | [yml](./configs/tinyformer/tinyformer_dinov3_xl_coco_pbm.yml) | [Google](https://drive.google.com/file/d/1JBJ_jnAZ6tu8Y_0WJaBQ2_fraZGU9-21/view?usp=drive_link) |
+
+
+
+
+<details>
+<summary><h3><strong>  Models without PBM</strong></h3></summary>
+  
+| Model | Dataset | AP | #Params | GFLOPs | Latency(ms) | config | checkpoint |
+| :---: | :---: | :---: | :---: | :---: |:------------:| :---: | :---: | 
+| **TinyFomer-S** | COCO | **51.3** | 9.8M |  25.1 | 2.33  | [yml](./configs/tinyformer/tinyformer_dinov3_s_coco.yml) | [Google](https://drive.google.com/file/d/198-pduC0C0Xvk8hDjFw1TFO96Lk93qG8/view?usp=drive_link) |
+| **TinyFomer-M** | COCO | **53.5** | 18.2M | 51.2 | 3.05 | [yml](./configs/tinyformer/tinyformer_dinov3_m_coco.yml) | [Google](https://drive.google.com/file/d/1_1ugu55IpLYLGvjm1bJUIq7VlJkAIjNC/view?usp=drive_link) |
+| **TinyFomer-L** | COCO | **56.5** | 32.3M | 96.3  |  3.54 | [yml](./configs/tinyformer/tinyformer_dinov3_l_coco.yml) | [Google](https://drive.google.com/file/d/1W98zx7PgYp01Al20jzwAah0ZaCKayJ3l/view?usp=drive_link) |
+| **TinyFomer-X** | COCO | **58.4** | 49.8M | 151.1 |  4.63  | [yml](./configs/tinyformer/tinyformer_dinov3_x_coco.yml) | [Google](https://drive.google.com/file/d/1_4FmTYCstRH2xiscRlFycv-fw5S6wtmt/view?usp=drive_link) |
+
+</details>
+
+
+### VisDrone 2019
+
+
+| Model | Dataset | AP | #Params | GFLOPs | config | checkpoint |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
+| **TinyFomer-S-PBM-visdrone** | VisDrone | **28.9** | 10.8M | 32.6 |  [yml](./configs/tinyformer/visdrone/tinyformer_dinov3_s_coco_pbm_visdrone.yml) | [Google](https://drive.google.com/file/d/1VmA32oD1KaIWKOTlYaD2huHzfU0UQL46/view?usp=drive_link) |
+| **TinyFomer-M-PBM-visdrone** | VisDrone | **30.9** | 20.1M | 63.0  | [yml](./configs/tinyformer/visdrone/tinyformer_dinov3_m_coco_pbm_visdrone.yml) | [Google](https://drive.google.com/file/d/1p54IP-WhVbOmSyVkpfnL2KOv_UmPAJcE/view?usp=drive_link) |
+| **TinyFomer-L-PBM-visdrone** | VisDrone | **32.2** | 33.6M | 105.6  | [yml](./configs/tinyformer/visdrone/tinyformer_dinov3_l_coco_pbm_visdrone.yml) | [Google](https://drive.google.com/file/d/1SRfYSNt_B1j2aRSZ1Zl0fo_5ykfK3BV5/view?usp=drive_link) |
+| **TinyFomer-X-PBM-visdrone** | VisDrone | **34.7** | 51.5M | 163.9  |  [yml](./configs/tinyformer/visdrone/tinyformer_dinov3_x_coco_pbm_visdrone.yml) | [Google](https://drive.google.com/file/d/1v-jRcyJvCUE1o9aA-tayxII9aM2_iqGB/view?usp=drive_link) |
+
 
 
 ### Object365+COCO
@@ -97,7 +119,7 @@ institution
 
 
 <details>
-<summary><h3><strong> 🔥 Pretrained Models on Objects365 (Best generalization) </strong></h3></summary>
+<summary><h3><strong>  Pretrained Models on Objects365 (Best generalization) </strong></h3></summary>
   
 | Model | Dataset | AP<sup>5000</sup> | #Params | GFLOPs | Latency(ms)  | config | checkpoint |
 | :---: | :---: | :---: | :---: | :---: |:------------:| :---: | :---: | 
@@ -127,7 +149,7 @@ pip install -r requirements.txt
 <summary> COCO2017 Dataset </summary>
 
 1. Download COCO2017 from [OpenDataLab](https://opendatalab.com/OpenDataLab/COCO_2017) or [COCO](https://cocodataset.org/#download).
-1. Modify paths in [coco_detection.yml](./configs/dataset/coco_detection.yml)
+2. Modify paths in [coco_detection.yml](./configs/dataset/coco_detection.yml)
 
     ```yaml
     train_dataloader:
@@ -139,6 +161,32 @@ pip install -r requirements.txt
     ```
 
 </details>
+
+<details>
+<summary> VisDrone 2019 Dataset </summary>
+
+1. Download dataset from [VisDrone-Dataset](https://github.com/VisDrone/VisDrone-Dataset).
+2. Modify `TXT_FOLDER`, `IMG_FOLDER`, and `OUTPUT_JSON` in [tools/dataset/visdrone2coco.py](./tools/dataset/visdrone2coco.py) to match your local paths, then run the script:
+
+   ```shell
+   # Run the conversion script
+   python tools/dataset/visdrone2coco.py
+   ```
+
+4. Modify paths in [vis_drone.yml](./configs/dataset/vis_drone.yml)
+
+    ```yaml
+    train_dataloader:
+        img_folder: ./datasets/VisDrone/train/
+        ann_file: ./datasets/VisDrone/annotations/train.json
+    val_dataloader:
+        img_folder: ./datasets/VisDrone/val/
+        ann_file: ./datasets/VisDrone/annotations/val.json
+    ```
+
+</details>
+
+
 
 <details>
 <summary> Objects365 Dataset </summary>
@@ -338,6 +386,9 @@ ckpts/
 
 
 ## 3. Usage
+
+
+
 <details open>
 <summary> COCO2017 </summary>
 
@@ -369,10 +420,28 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --master_port=7777 --nproc_per_node=4 trai
 ```
 </details>
 
+<details open>
+<summary> VisDrone 2019 </summary>
+
+1. Training: For VisDrone dataset, please download our COCO chekcpooint as initial weight.
+```shell
+
+
+CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --master_port=7777 --nproc_per_node=4 train.py -c configs/tinyformer/visdrone/tinyformer_dinov3_${model}_coco_pbm.yml --use-amp --seed=0 -t TinyFormer-${model}-pbm.pth
+```
+
+<!-- <summary>2. Testing </summary> -->
+2. Testing
+```shell
+
+
+CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --master_port=7777 --nproc_per_node=4 train.py -c configs/tinyformer/visdrone/tinyformer_dinov3_${model}_coco_pbm.yml --test-only -r TinyFormer-${model}-pbm-visdrone.pth
+
+```
 
 
 
-
+</details>
 
 
 
