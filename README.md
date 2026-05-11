@@ -27,7 +27,7 @@
 </p> -->
 
 <p align="center">
-    TinyFormer is a high-performance real-time object detector that bridges the gap between YOLO-style efficiency and DETR-based precision. By introducing the Parallel Bi-fusion Module (PBM) and Spatial Detail Adapter (SDA), it effectively preserves fine-grained spatial information, achieving State-of-the-Art performance in tiny object detection without compromising inference speed.
+    TinyFormer is a high-performance real-time object detector that bridges the gap between YOLO-style efficiency and DETR-based precision. By introducing the Parallel Bi-fusion Module (PBM) and Spatial Semantic Adapter (SSA), it effectively preserves fine-grained spatial information, achieving State-of-the-Art performance in tiny object detection without compromising inference speed.
 </p>
 
 ---
@@ -54,8 +54,9 @@ institution
 
 
 <p align="center">
-  <img src="./figs/flops_tradeoff_AP.png" alt="Image 1" width="49%">
-  <img src="./figs/params_tradeoff_AP.png" alt="Image 2" width="49%">
+  <img src="./figs/flops_tradeoff_AP.png" alt="Image 1" width="33%">
+  <img src="./figs/params_tradeoff_AP.png" alt="Image 2" width="33%">
+  <img src="./figs/params_tradeoff_AP_visdrone.png" alt="Image 2" width="33%">
 </p>
 
 </details>
