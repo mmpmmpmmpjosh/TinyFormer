@@ -428,7 +428,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --master_port=7777 --nproc_per_node=4 trai
 ```shell
 
 
-CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --master_port=7777 --nproc_per_node=4 train.py -c configs/tinyformer/visdrone/tinyformer_dinov3_${model}_coco_pbm.yml --use-amp --seed=0 -t TinyFormer-${model}-pbm.pth
+CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --master_port=7777 --nproc_per_node=4 train.py -c configs/tinyformer/visdrone/tinyformer_dinov3_${model}_coco_pbm_visdrone.yml --use-amp --seed=0 -t TinyFormer-${model}-pbm-visdrone.pth
 ```
 
 <!-- <summary>2. Testing </summary> -->
@@ -436,7 +436,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --master_port=7777 --nproc_per_node=4 trai
 ```shell
 
 
-CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --master_port=7777 --nproc_per_node=4 train.py -c configs/tinyformer/visdrone/tinyformer_dinov3_${model}_coco_pbm.yml --test-only -r TinyFormer-${model}-pbm-visdrone.pth
+CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --master_port=7777 --nproc_per_node=4 train.py -c configs/tinyformer/visdrone/tinyformer_dinov3_${model}_coco_pbm_visdrone.yml --test-only -r TinyFormer-${model}-pbm-visdrone.pth
 
 ```
 
