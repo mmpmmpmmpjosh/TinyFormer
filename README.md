@@ -54,9 +54,7 @@ institution
 
 
 <p align="center">
-  <img src="./figs/flops_tradeoff_AP.png" alt="Image 1" width="33%">
-  <img src="./figs/params_tradeoff_AP.png" alt="Image 2" width="33%">
-  <img src="./figs/params_tradeoff_AP_visdrone.png" alt="Image 2" width="33%">
+  <img src="./figs/flops_tradeoff_AP.png" alt="Image 1" width="32%"><img src="./figs/params_tradeoff_AP.png" alt="Image 2" width="32%"><img src="./figs/params_tradeoff_AP_visdrone.png" alt="Image 3" width="32%">
 </p>
 
 </details>
