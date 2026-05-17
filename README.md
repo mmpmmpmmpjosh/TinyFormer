@@ -34,12 +34,20 @@
 
 
 <div align="center">
-  Author
-  <!-- <a href="http://www.shihuahuang.cn">Shihua Huang</a><sup>1*</sup>,&nbsp;&nbsp;
-  Yongjie Hou<sup>1,2*</sup>,&nbsp;&nbsp;
-  Longfei Liu<sup>1*</sup>,&nbsp;&nbsp;
-  <a href="https://xuanlong-yu.github.io/">Xuanlong Yu</a><sup>1</sup>,&nbsp;&nbsp;
-  <a href="https://xishen0220.github.io">Xi Shen</a><sup>1†</sup>&nbsp;&nbsp; -->
+
+  
+  <a href="https://scholar.google.com/citations?user=mXUOEzwAAAAJ&hl=zh-TW">Jun-Wei Hsieh</a><sup>1*</sup>,&nbsp;&nbsp;
+  Meng-Yu Kao<sup>1</sup>,&nbsp;&nbsp;
+  <a href="https://scholar.google.com.tw/citations?user=rp-3vOYAAAAJ&hl=zh-TW&oi=sra">Ghufron Wahyu Kurniawan</a><sup>1</sup>,&nbsp;&nbsp;
+  <a href="https://scholar.google.com.tw/citations?user=GBi3LYkAAAAJ&hl=zh-TW&oi=sra">Kuan-Chuan Peng</a><sup>2</sup>
+  
+
+  
+  <sup>1</sup>College of Artificial Intelligence, National Yang Ming Chiao Tung University, Taiwan<br>
+  <sup>2</sup>Mitsubishi Electric Research Laboratories
+  
+
+  <small><sup>*</sup>Corresponding author</small>
 </div>
 
   
