@@ -1,5 +1,5 @@
 <h2 align="center">
-  TinyFormer-Preserving-Tiny-Objects-in-YOLO-style-Detectors
+  TinyFormer: Preserving Tiny Objects in YOLO-DETR Hybrid Real-time Detectors
 </h2>
 
 <!-- <p align="center">
@@ -546,7 +546,17 @@ If you use `TinFormer` or its methods in your work, please cite the following Bi
 <summary> bibtex </summary>
 
 ```latex
+ @article{hsieh2026tinyformer,
 
+  title={TinyFormer: Preserving Tiny Objects in YOLO-DETR Hybrid Real-time Detectors},
+
+  author={Hsieh, Jun-Wei and Kao, Meng-Yu and Kurniawan, Ghufron Wahyu and Peng, Kuan-Chuan},
+
+  journal={arXiv preprint arXiv:2605.25046},
+
+  year={2026}
+
+} 
   
 ```
 </details>
