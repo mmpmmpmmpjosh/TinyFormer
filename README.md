@@ -66,8 +66,9 @@
  
   
 ##  Updates
-> Due to download issues reported by some users, we also provide a Google Drive mirror for easier access.
-[![Google Drive](https://img.shields.io/badge/Google%20Drive-Download%20Checkpoints-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1yIsUO14g5EyTFRbDeISoNJSDqNeSgT5o)
+📢 **A Google Drive mirror is now available for faster and more reliable checkpoint downloads.**
+
+[![Google Drive](https://img.shields.io/badge/Google%20Drive-Checkpoints-4285F4?logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1yIsUO14g5EyTFRbDeISoNJSDqNeSgT5o)
   
   
 ## 1. Model Zoo
